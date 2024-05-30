@@ -14,7 +14,9 @@
   <body>
     <header></header>
     <main>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 mx-24 mt-24">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 mx-24 mt-24"
+      >
         <!-- Triangle Card -->
         <div class="card bg-base-100 shadow-xl border border-black pt-8">
           <figure><img src="images/triangle.png" alt="Triangle" /></figure>
@@ -24,6 +26,7 @@
             <div class="flex justify-center gap-6">
               <span class="text-lg">
                 <input
+                  id="triangle-base"
                   type="text"
                   class="bg-gray-200 h-10 rounded-lg text-lg p-5 w-24"
                   placeholder="b"
@@ -32,6 +35,7 @@
               </span>
               <span class="text-lg">
                 <input
+                  id="triangle-height"
                   type="text"
                   class="bg-gray-200 h-10 rounded-lg text-lg p-5 w-24"
                   placeholder="h"
@@ -39,13 +43,18 @@
                 cm
               </span>
             </div>
-            <div class="text-lg bg-red-600 w-44 text-white p-3 rounded-xl mx-auto">
+            <div
+              class="text-lg bg-red-600 w-44 text-white p-3 rounded-xl mx-auto"
+            >
               Area:
-              <span>0</span>
+              <span id="triangle-result-show">0</span>
               cm<sup>2</sup>
             </div>
             <div class="card-actions justify-end">
-              <button class="btn btn-primary w-full text-white text-lg">
+              <button
+                onclick="triangle()"
+                class="btn btn-primary w-full text-white text-lg"
+              >
                 Calculate
               </button>
             </div>
@@ -60,6 +69,7 @@
             <div class="flex justify-center gap-6">
               <span class="text-lg">
                 <input
+                  id="rectangle-base"
                   type="text"
                   class="bg-gray-200 h-10 rounded-lg text-lg p-5 w-24"
                   placeholder="w"
@@ -68,6 +78,7 @@
               </span>
               <span class="text-lg">
                 <input
+                  id="rectangle-height"
                   type="text"
                   class="bg-gray-200 h-10 rounded-lg text-lg p-5 w-24"
                   placeholder="i"
@@ -75,13 +86,18 @@
                 cm
               </span>
             </div>
-            <div class="text-lg bg-red-600 w-44 text-white p-3 rounded-xl mx-auto">
+            <div
+              class="text-lg bg-red-600 w-44 text-white p-3 rounded-xl mx-auto"
+            >
               Area:
-              <span>0</span>
+              <span id="rectangle-result-show">0</span>
               cm<sup>2</sup>
             </div>
             <div class="card-actions justify-end">
-              <button class="btn btn-primary w-full text-white text-lg">
+              <button
+                onclick="rectangle()"
+                class="btn btn-primary w-full text-white text-lg"
+              >
                 Calculate
               </button>
             </div>
@@ -96,6 +112,7 @@
             <div class="flex justify-center gap-6">
               <span class="text-lg">
                 <input
+                  id="parallelogram-base"
                   type="text"
                   class="bg-gray-200 h-10 rounded-lg text-lg p-5 w-24"
                   placeholder="b"
@@ -104,6 +121,7 @@
               </span>
               <span class="text-lg">
                 <input
+                  id="parallelogram-height"
                   type="text"
                   class="bg-gray-200 h-10 rounded-lg text-lg p-5 w-24"
                   placeholder="h"
@@ -111,19 +129,23 @@
                 cm
               </span>
             </div>
-            <div class="text-lg bg-red-600 w-44 text-white p-3 rounded-xl mx-auto">
+            <div
+              class="text-lg bg-red-600 w-44 text-white p-3 rounded-xl mx-auto"
+            >
               Area:
-              <span>0</span>
+              <span id="parallelogram-result-show">0</span>
               cm<sup>2</sup>
             </div>
             <div class="card-actions justify-end">
-              <button class="btn btn-primary w-full text-white text-lg">
+              <button
+                onclick="parallelogram()"
+                class="btn btn-primary w-full text-white text-lg"
+              >
                 Calculate
               </button>
             </div>
           </div>
         </div>
-        
       </div>
     </main>
     <script src="index.js"></script>
